@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    overflow: hidden;
+}
+
+#container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+#container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Make all images invisible initially */
+    transition: opacity 1s ease-in-out;
+}
+
+#container img.active {
+    opacity: 1; /* Show only the active image */
+}
+
+#overlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    color: white;
+}
+
+#info {
+    font-size: 3em;
+}
+
+#time {
+    font-size: 4em;
+}
+
+#day, #weather {
+    margin-top: 10px;
+}
